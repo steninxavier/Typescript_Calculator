@@ -6,7 +6,7 @@ import Calc,{CalcInput, InputType,OperatorType} from '../modules/calc'
 
 
 const Container= styled.div `
-    
+
 `
 const Grid= styled.div`
     display:grid;
@@ -33,6 +33,7 @@ const Calculator: React.FC= () => {
   const handleOops=()=> setInputs((prev)=>prev.slice(0,-1));
   const handleNumerical =(value:number)=>()=>
    appendInput({type: InputType.Numerical,value});
+   
    const handleOperator = (operator:OperatorType)=>()=>
    appendInput({type:InputType.Operator,operator});
   return (
@@ -53,7 +54,7 @@ const Calculator: React.FC= () => {
             <Button label="3" buttonType={ButtonType.Number} onClick={handleNumerical(3)}position={[2,4]}/>
             <Button label="2" buttonType={ButtonType.Number} onClick={handleNumerical(2)}position={[1,4]}/>
             <Button label="1" buttonType={ButtonType.Number} onClick={handleNumerical(1)}position={[0,4]}/>
-            <Button label="0" buttonType={ButtonType.Number} position={[0,5]} width={3}/>
+            <Button label="0" buttonType={ButtonType.Number}  onClick={handleNumerical(0)}position={[0,5]} width={3}/>
         </Grid>
     </Container>
   )

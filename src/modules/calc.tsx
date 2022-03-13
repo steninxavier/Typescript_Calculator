@@ -1,4 +1,4 @@
-import { type } from "os";
+
 
 export enum InputType{
     Numerical,
@@ -10,7 +10,7 @@ export enum OperatorType{
     Equals = 'equals',
 }
 export type CalcInput=
-|{type:InputType.Numerical; value: number}
+{type:InputType.Numerical; value: number}
 |{type:InputType.Operator; operator:OperatorType};
 
 export type calcState ={
