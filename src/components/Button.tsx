@@ -39,7 +39,7 @@ const Button:React.FC<props>= ({
   };
   if(buttonType=== ButtonType.Number){
     styles.color ="black"
-    styles.background ="#FF5733"
+    styles.background ="#8B8000"
   }
   return (
     <CalButton onClick={onClick} style={styles}>{label}</CalButton>
