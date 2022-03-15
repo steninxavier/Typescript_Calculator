@@ -49,7 +49,7 @@ return inputs.reduce<OperationsBuilder>(
                 }else{
                     return{
                         operations:[...builder.operations, builder.working],
-                        working:{operator: OperatorType.Add, value:0},
+                        working:{operator: input.operator, value:0},
                     };
                 }
             }
